@@ -8,6 +8,7 @@ namespace collision
         Graphics g;
         Bitmap bmp;
         Ball ball1, ball2, ball3, ball4, ball5;
+        BallsList ballList1;
 
         public Form1()
         {
@@ -19,6 +20,13 @@ namespace collision
             ball4 = new Ball();
             ball5 = new Ball();
 
+            ballList1 = new BallsList();
+            ballList1.Balls.Add(ball1);
+            ballList1.Balls.Add(ball2);
+            ballList1.Balls.Add(ball3);
+            ballList1.Balls.Add(ball4);
+            ballList1.Balls.Add(ball5);
+
             timer.Start();
         }
 
@@ -29,109 +37,12 @@ namespace collision
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            //Ball 1
-            if (CheckCollision(ball1, ball2))
-            {
-                ball1.ballVelocity.Width = -ball1.ballVelocity.Width;
-                ball1.ballVelocity.Height = -ball1.ballVelocity.Height;
 
-                ball2.ballVelocity.Width = -ball2.ballVelocity.Width;
-                ball2.ballVelocity.Height = -ball2.ballVelocity.Height;
-            }
-            if (CheckCollision(ball1, ball3))
-            {
-                ball1.ballVelocity.Width = -ball1.ballVelocity.Width;
-                ball1.ballVelocity.Height = -ball1.ballVelocity.Height;
+            ballList1.resolveCollision();
 
-                ball3.ballVelocity.Width = -ball3.ballVelocity.Width;
-                ball3.ballVelocity.Height = -ball3.ballVelocity.Height;
-            }
-            if (CheckCollision(ball1, ball4))
-            {
-                ball1.ballVelocity.Width = -ball1.ballVelocity.Width;
-                ball1.ballVelocity.Height = -ball1.ballVelocity.Height;
-
-                ball4.ballVelocity.Width = -ball4.ballVelocity.Width;
-                ball4.ballVelocity.Height = -ball4.ballVelocity.Height;
-            }
-            if (CheckCollision(ball1, ball5))
-            {
-                ball1.ballVelocity.Width = -ball1.ballVelocity.Width;
-                ball1.ballVelocity.Height = -ball1.ballVelocity.Height;
-
-                ball5.ballVelocity.Width = -ball5.ballVelocity.Width;
-                ball5.ballVelocity.Height = -ball5.ballVelocity.Height;
-            }
-
-            //Ball 2
-            if (CheckCollision(ball2, ball3))
-            {
-                ball2.ballVelocity.Width = -ball2.ballVelocity.Width;
-                ball2.ballVelocity.Height = -ball2.ballVelocity.Height;
-
-                ball3.ballVelocity.Width = -ball3.ballVelocity.Width;
-                ball3.ballVelocity.Height = -ball3.ballVelocity.Height;
-            }
-            if (CheckCollision(ball2, ball4))
-            {
-                ball2.ballVelocity.Width = -ball2.ballVelocity.Width;
-                ball2.ballVelocity.Height = -ball2.ballVelocity.Height;
-
-                ball4.ballVelocity.Width = -ball4.ballVelocity.Width;
-                ball4.ballVelocity.Height = -ball4.ballVelocity.Height;
-            }
-            if (CheckCollision(ball2, ball5))
-            {
-                ball2.ballVelocity.Width = -ball2.ballVelocity.Width;
-                ball2.ballVelocity.Height = -ball2.ballVelocity.Height;
-
-                ball5.ballVelocity.Width = -ball5.ballVelocity.Width;
-                ball5.ballVelocity.Height = -ball5.ballVelocity.Height;
-            }
-
-            //Ball 3
-            if (CheckCollision(ball3, ball4))
-            {
-                ball3.ballVelocity.Width = -ball3.ballVelocity.Width;
-                ball3.ballVelocity.Height = -ball3.ballVelocity.Height;
-
-                ball4.ballVelocity.Width = -ball4.ballVelocity.Width;
-                ball4.ballVelocity.Height = -ball4.ballVelocity.Height;
-            }
-            if (CheckCollision(ball3, ball5))
-            {
-                ball3.ballVelocity.Width = -ball3.ballVelocity.Width;
-                ball3.ballVelocity.Height = -ball3.ballVelocity.Height;
-
-                ball5.ballVelocity.Width = -ball5.ballVelocity.Width;
-                ball5.ballVelocity.Height = -ball5.ballVelocity.Height;
-            }
-
-            //Ball 4
-            if (CheckCollision(ball4, ball5))
-            {
-                ball4.ballVelocity.Width = -ball4.ballVelocity.Width;
-                ball4.ballVelocity.Height = -ball4.ballVelocity.Height;
-
-                ball5.ballVelocity.Width = -ball5.ballVelocity.Width;
-                ball5.ballVelocity.Height = -ball5.ballVelocity.Height;
-            }
-
-            ball1.CheckMove();
-            ball2.CheckMove();
-            ball3.CheckMove();
-            ball4.CheckMove();
-            ball5.CheckMove();
+            ballList1.CheckMove();
 
             Paint();
-        }
-
-        private bool CheckCollision(Ball a, Ball b)
-        {
-            float dx = a.ballPosition.X - b.ballPosition.X;
-            float dy = a.ballPosition.Y - b.ballPosition.Y;
-            float distance = (float)Math.Sqrt(dx * dx + dy * dy);
-            return (distance) < (a.radius + b.radius);
         }
 
         private void Paint()
@@ -139,6 +50,7 @@ namespace collision
             bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             pictureBox1.Image = bmp;
             g = Graphics.FromImage(bmp);
+
             // Draw the ball at its current position
             g.FillEllipse(Brushes.Red, ball1.ballPosition.X, ball1.ballPosition.Y, ball1.ballSize, ball1.ballSize);
             g.FillEllipse(Brushes.Blue, ball2.ballPosition.X, ball2.ballPosition.Y, ball2.ballSize, ball2.ballSize);
