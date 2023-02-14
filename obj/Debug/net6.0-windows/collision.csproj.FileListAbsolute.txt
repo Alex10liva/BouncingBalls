@@ -1,0 +1,17 @@
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\bin\Debug\net6.0-windows\collision.exe
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\bin\Debug\net6.0-windows\collision.deps.json
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\bin\Debug\net6.0-windows\collision.runtimeconfig.json
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\bin\Debug\net6.0-windows\collision.dll
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\bin\Debug\net6.0-windows\collision.pdb
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.csproj.AssemblyReference.cache
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.Form1.resources
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.csproj.GenerateResource.cache
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.AssemblyInfoInputs.cache
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.AssemblyInfo.cs
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.csproj.CoreCompileInputs.cache
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.dll
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\refint\collision.dll
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.pdb
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\collision.genruntimeconfig.cache
+D:\Usuarios\Escritorio\Tareas\2023 I\Lab. Graficaión y videojuegos\collision\collision\obj\Debug\net6.0-windows\ref\collision.dll
